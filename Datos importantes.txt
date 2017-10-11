@@ -1,0 +1,8 @@
+Habitacion:
+
+Simple
+Doble
+Familiar   
+Presidencial 
+
+                       
