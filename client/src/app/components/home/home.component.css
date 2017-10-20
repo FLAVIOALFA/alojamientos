@@ -1,0 +1,183 @@
+/********************************************* Buscador *********************************************/
+
+/************************** Pantallas Tablets **************************/
+@media screen and (min-width: 375px) and (max-width: 767px){
+  .contenedor-busqueda{
+
+  }
+
+  /******** Alto de los inputs y boton vamos ********/
+  .input-pais, .input-provincia, .fecha-viaje, .btn-vamos{
+    height: 40px;
+  }
+  /******** Fin alto de los inputs y boton vamos ********/
+
+  .input-pais{
+    margin-top: 5px;
+  }
+  /***** Le damos un margen top al buscador de provincia *****/
+  .input-provincia{
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  /***** Fin le damos un margen top al buscador de provincia *****/
+}
+/************************ Fin Pantallas Tablets ************************/
+
+/************************** Pantallas Tablets **************************/
+@media screen and (min-width: 768px){
+  .contenedor-busqueda{
+    width: 80%;
+    position: relative;
+    left: 15%;
+    float: left;
+    box-sizing: inherit;
+  }
+
+  /********* Alto de los inputs y boton vamos *********/
+  .input-pais, .input-provincia, .fecha-viaje, .btn-vamos{
+    height: 50px;
+  }
+  /********* Fin alto de los inputs y boton vamos *********/
+
+  /***** Le damos un margen top al buscador de provincia *****/
+  .input-provincia{
+    margin-top: 7px;
+    margin-bottom: 7px;
+  }
+  /***** Fin le damos un margen top al buscador de provincia *****/
+}
+/************************ Fin Pantallas Tablets ************************/
+
+/************************** Pantallas Grandes **************************/
+@media screen and (min-width: 991px){
+  .contenedor-busqueda{
+    width: 60%;
+    position: relative;
+    left: 20%;
+    float: left;
+    box-sizing: inherit;
+  }
+  /********* Alto de los inputs y boton vamos *********/
+  .input-pais, .input-provincia, .fecha-viaje, .btn-vamos{
+    height: 50px;
+  }
+  /********* Fin alto de los inputs y boton vamos *********/
+
+  /***** Le damos un margen top al buscador de provincia *****/
+  .input-provincia{
+    margin-top:10px;
+    margin-bottom: 10px;
+  }
+  /***** Fin le damos un margen top al buscador de provincia *****/
+
+}
+/************************ Fin Pantallas Grandes ************************/
+/******************************************* Fin Buscador *******************************************/
+.redondear-puntas{
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.card-alojamiento{
+  display: inline-block !important;
+  left: 6%;
+}
+.carousel-item > .card > img{
+  height:220px;
+}
+
+.pais{
+  display: inline-block;
+}
+
+/********************* Focus del campo pais y provincia *********************/
+.input-pais:focus, .input-provincia:focus {
+  border-color: #ff5400;
+}
+/********************* Fin focus del campo pais y provincia *********************/
+
+/********************* Boton fecha de viaje *********************/
+.fecha-viaje{
+  color: #ffffff;
+  font-weight: 400;
+  background: #474a4c;
+  box-shadow: 1px 2px 3px black;
+}
+.fecha-viaje:hover{
+  background: #525659;
+}
+.fecha-viaje:active{
+  box-shadow:none;
+}
+.fa-calendar{
+  color: #ff5400;
+}
+/********************* Fin boton fecha de viaje *********************/
+
+/********************* Boton vamos *********************/
+.btn-vamos{
+  background: #ce4400;
+  border-color: #892d00;
+  color: #ffffff;
+  font-weight: 400;
+}
+.btn-vamos:active{
+  border-color: #ff7b3a;
+}
+.btn-vamos:focus{
+  box-shadow: none;
+}
+.btn-vamos:hover{
+  background: #e24d04;
+}
+/********************* Fin boton vamos *********************/
+
+
+/************************* CAROUSEL DE CARDS ****************************/
+body {
+  perspective: 1000px;
+}
+
+.container {
+  padding-top: 20px;
+  background: #bada55;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  margin: 0;
+  float: left;
+}
+
+.card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.owl-item {
+  transition: all 250ms ease-out;
+  transform: translate3d(0px, 0px, 0px) scale(1);
+}
+.owl-item.active {
+  transform: translate3d(0px, 0px, -10px) scale(1) rotateY(75deg);
+}
+.owl-item.active + .active {
+  transform: translate3d(0px, 0px, 10px) scale(1);
+}
+.owl-item.active + .active + .active {
+  transform: translate3d(0px, 0px, 20px) scale(1);
+}
+.owl-item.active + .active + .active + .active {
+  transform: translate3d(0px, 0px, 10px) scale(1);
+}
+.owl-item.active + .active + .active + .active + .active {
+  transform: translate3d(0px, 0px, -10px) scale(1) rotateY(-75deg);
+}
+
+/*********************** FIN CAROUSEL DE CARDS **************************/
