@@ -22,7 +22,7 @@
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
   .btn-vamos{
-    top: 5px;
+    top: 0;
   }
 }
 /************************ Fin Pantallas Tablets ************************/
@@ -50,7 +50,7 @@
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
   .btn-vamos{
-    top: 7px;
+    top: 0;
   }
 }
 /************************ Fin Pantallas Tablets ************************/
@@ -77,12 +77,13 @@
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
   .btn-vamos{
-    top: 10px;
+    top: 0;
   }
 
 }
 /************************ Fin Pantallas Grandes ************************/
 /******************************************* Fin Buscador *******************************************/
+
 .redondear-puntas{
   border-radius: 4px;
   padding: 10px;
@@ -106,7 +107,6 @@
   background: #474a4c;
   box-shadow: 1px 2px 3px black;
   border: 1px solid #3a3a3a;
-
 }
 .fecha-viaje:hover{
   background: #525659;
@@ -140,36 +140,70 @@
 
 /************************* CAROUSEL DE CARDS ****************************/
 .carousel-propio{
-  background: red;
+
 }
 @media screen and (min-width: 991px){
   .carousel-propio{
-    width: 61.3rem;
+    width: 100%;
     height: 417px;
     overflow: hidden;
     justify-content: center;
     position:relative;
-    left: 60px;
   }
 
   .carousel-propio ul li{
     margin-right: 10px;
   }
 
+  .sig{
+    left: 96.9%;
+  }
+
+  .card{
+    width: 20rem;
+  }
+
+
+
+}
+
+@media screen and (min-width: 768px){
+
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px){
+  .carousel-propio{
+    width: 100%;
+    overflow: hidden;
+    justify-content: center;
+    position:relative;
+  }
+
+  .sig{
+    left: 93.5%;
+  }
+
+  .card{
+    width: 320px;
+    margin-right: 10px;
+  }
+
+
 }
 /******************** FLECHAS DEL SLIDE ********************/
 .prev, .sig{
   position: absolute;
-  background: black;
-  height: inherit;
+  top: 45%;
+  z-index: 1002;
+  color: #e24d04;
+  opacity: 0.3;
+  transition-duration: 0.5s;
 }
 
-.sig{
-  left: 97%;
-}
-
-.prev{
-  left: 0;
+.prev:hover, .sig:hover{
+  opacity: 1;
+  transition-duration: 0.5s;
 }
 
 .fa-chevron-left, .fa-chevron-right{
@@ -191,10 +225,3 @@
 }
 
 /*********************** FIN CAROUSEL DE CARDS **************************/
-
-
-
-
-
-
-
