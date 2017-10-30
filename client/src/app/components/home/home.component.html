@@ -3,7 +3,10 @@
 <div class="row contenedor-busqueda">
   <div class="col-lg-6 col-md-6 col-sm-12">
     <div class="input-group">
-      <div class="cpointer fecha-viaje form-control">Aca va una fecha &nbsp; <i class="fa fa-calendar" aria-hidden="true"></i></div>
+      <div class="cpointer fecha-viaje form-control" (click)="btnVamos()">
+        {{ titulo_fecha }} &nbsp;
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </div>
     </div>
   </div>
   <div class="col-lg-6 col-md-6 col-sm-12">
@@ -14,7 +17,8 @@
 
   <div class="col-md-12 col-sm-12">
     <div class="input-group">
-      <input type="text" class="form-control input-provincia" placeholder="Search for..." aria-label="Search for...">
+      <input type="text" class="form-control input-provincia" placeholder="Elija la provincia..."
+             aria-label="Search for...">
       <span class="input-group-btn">
         <button class="btn btn-secondary cpointer btn-vamos" type="button">¡Vamos!</button>
       </span>
@@ -26,101 +30,62 @@
 
 <!-- ******************** CARGAR ALGUNOS HOTELES POR DEFECTO O DESTACADOS  ********************-->
 <!-- Carousel Slider -->
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-
-      <div class="controls">
-        <button type="button" class="btn-prev">prev</button>
-        <button type="button" class="btn-next">next</button>
-      </div>
-      <div class="carousel-container">
-        <ul>
-          <li>
-            <div class="card">
-              <img class="card-img-top img-fluid" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-          <li>
-            <div class="card">
-              <img class="card-img-top" src="http://placehold.it/318x180" alt="Card image cap">
-              <div class="card-block">
-                <h4 class="card-title">Card title</h4>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Button</a>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </div>
+<div class="carousel-alojamientos">
+  <div class="prev cpointer">
+    <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
   </div>
+  <div class="sig cpointer">
+    <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+  </div>
+<!--************************* ACA ARRANCA EL SLIDE *************************-->
+  <div class="carousel-propio">
+    <ul>
+      <li>
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="../../../assets/imagenes/playa1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="../../../assets/imagenes/playa1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="../../../assets/imagenes/playa1.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="card" style="width: 20rem;">
+          <img class="card-img-top" src="../../../assets/imagenes/playa3.jpg" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">Card title</h4>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
 </div>
+
+
 <!-- Carousel Slider -->
 
 <!-- ******************************* FIN DE LA CARGA DE HOTELES ****************************** -->

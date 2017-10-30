@@ -21,6 +21,9 @@
     margin-bottom: 5px;
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
+  .btn-vamos{
+    top: 5px;
+  }
 }
 /************************ Fin Pantallas Tablets ************************/
 
@@ -46,6 +49,9 @@
     margin-bottom: 7px;
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
+  .btn-vamos{
+    top: 7px;
+  }
 }
 /************************ Fin Pantallas Tablets ************************/
 
@@ -70,6 +76,9 @@
     margin-bottom: 10px;
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
+  .btn-vamos{
+    top: 10px;
+  }
 
 }
 /************************ Fin Pantallas Grandes ************************/
@@ -79,21 +88,14 @@
   padding: 10px;
 }
 
-.card-alojamiento{
-  display: inline-block !important;
-  left: 6%;
-}
-.carousel-item > .card > img{
-  height:220px;
-}
-
 .pais{
   display: inline-block;
 }
 
 /********************* Focus del campo pais y provincia *********************/
 .input-pais:focus, .input-provincia:focus {
-  border-color: #ff5400;
+  box-shadow: 0 0 0 0.2rem rgba(255, 97, 0, 0.25);
+  border: 1px solid orange !important;
 }
 /********************* Fin focus del campo pais y provincia *********************/
 
@@ -103,6 +105,8 @@
   font-weight: 400;
   background: #474a4c;
   box-shadow: 1px 2px 3px black;
+  border: 1px solid #3a3a3a;
+
 }
 .fecha-viaje:hover{
   background: #525659;
@@ -135,49 +139,62 @@
 
 
 /************************* CAROUSEL DE CARDS ****************************/
-body {
-  perspective: 1000px;
+.carousel-propio{
+  background: red;
+}
+@media screen and (min-width: 991px){
+  .carousel-propio{
+    width: 61.3rem;
+    height: 417px;
+    overflow: hidden;
+    justify-content: center;
+    position:relative;
+    left: 60px;
+  }
+
+  .carousel-propio ul li{
+    margin-right: 10px;
+  }
+
+}
+/******************** FLECHAS DEL SLIDE ********************/
+.prev, .sig{
+  position: absolute;
+  background: black;
+  height: inherit;
 }
 
-.container {
-  padding-top: 20px;
-  background: #bada55;
+.sig{
+  left: 97%;
 }
 
-ul {
+.prev{
+  left: 0;
+}
+
+.fa-chevron-left, .fa-chevron-right{
+  top:45%;
+  position: inherit;
+}
+
+.fa-chevron-right{
+  z-index: 2000;
+  position: inherit;
+}
+/****************** FIN FLECHAS DEL SLIDE ******************/
+
+.carousel-propio ul{
   padding: 0;
-  list-style: none;
-}
-
-li {
-  margin: 0;
-  float: left;
-}
-
-.card img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-.owl-item {
-  transition: all 250ms ease-out;
-  transform: translate3d(0px, 0px, 0px) scale(1);
-}
-.owl-item.active {
-  transform: translate3d(0px, 0px, -10px) scale(1) rotateY(75deg);
-}
-.owl-item.active + .active {
-  transform: translate3d(0px, 0px, 10px) scale(1);
-}
-.owl-item.active + .active + .active {
-  transform: translate3d(0px, 0px, 20px) scale(1);
-}
-.owl-item.active + .active + .active + .active {
-  transform: translate3d(0px, 0px, 10px) scale(1);
-}
-.owl-item.active + .active + .active + .active + .active {
-  transform: translate3d(0px, 0px, -10px) scale(1) rotateY(-75deg);
+  list-style-type: none;
+  display: flex;
+  margin-left:0;
 }
 
 /*********************** FIN CAROUSEL DE CARDS **************************/
+
+
+
+
+
+
+

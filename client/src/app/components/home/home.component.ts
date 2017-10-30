@@ -7,14 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-
+  private titulo_fecha:String;
+  private bandera = false;
 
   constructor() {
-
+      this.titulo_fecha = "Ingrese una fecha de viaje";
   }
 
   ngOnInit() {
     //Aca se hace algo cuando el componente arranca.
+
+  }
+
+  btnVamos(){
 
   }
 
