@@ -50,27 +50,28 @@ export class HomeComponent implements OnInit {
   }
 
   ponerDatos( fecha:string, posicion:number ) {
-    console.log(moment().locale("es"));
-    let lala = moment(fecha).locale("Es").format("ddd, D MMM");
-
-    console.log(lala);
+    let aux:string;
+    let fecha_to_show= moment(fecha).locale("Es").format("dddd, D MMM");
 
     let fec: any[] = fecha.split("-");
     let anio:number = parseInt( fec[0] );
     let mes:number = parseInt( fec[1] );
     let dia:number = parseInt( fec[2] );
 
+    aux = this.capitalizar(fecha_to_show);
+
     //Comprobamos que sea la fecha de ida
     if (!(posicion % 2 == 0)){
       //Si tiene un valor grabado ya..
       this.fecha_ida = fecha;
-      this.capitalizar("una prueba");
+      this.titulo_fecha = aux + " - ";
       return new Date(anio, mes, dia);
 
       //Comprobamos que sea la fecha de vuelta
     }else{
       //Si tiene un valor grabado ya..
       this.fecha_vuelta = fecha;
+      this.titulo_fecha = this.titulo_fecha + aux;
       return new Date();
 
     }
@@ -79,10 +80,10 @@ export class HomeComponent implements OnInit {
 
   capitalizar( cadena:string ){
     let result:string = "";
-    let cadena1 = "vie., 23 nov.";
-    cadena1 = cadena1.replace(".", "");
-    let fechas:any[] = cadena1.split(" ");
-    console.log(cadena1);
+
+    cadena = cadena.replace(".", "");
+    let fechas:any[] = cadena.split(" ");
+    console.log(cadena);
     for ( let fecha of fechas){
       if( ! parseInt(fecha) ){
           fecha = fecha.replace(fecha[0],fecha[0].toUpperCase());
@@ -91,7 +92,7 @@ export class HomeComponent implements OnInit {
       result = result + " " + fecha;
     }
 
-      console.log(result);
+    return result;
 
   }
 
