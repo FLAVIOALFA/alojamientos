@@ -1,39 +1,39 @@
 <!-- ************************ ESTA ES LA PARTE DE LA BUSQUEDA. ************************ -->
-<br>
-<div class="row contenedor-busqueda">
-  <div class="col-lg-6 col-md-6 col-sm-12">
-    <div class="input-group">
-      <div class="cpointer fecha-viaje form-control" id="datepicker">
-        {{ titulo_fecha }}&nbsp;
-        <i class="fa fa-calendar" aria-hidden="true"></i>
+<div id="fondoPagina">
+  <br>
+  <div class="container">
+    <div class="row contenedor-busqueda">
+      <div class="col-lg-7 col-md-7 col-sm-12">
+        <div class="input-group">
+          <div class="cpointer fecha-viaje form-control" id="datepicker">
+            {{ titulo_fecha }}
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <div class="col-lg-6 col-md-6 col-sm-12">
-    <div class="input-group">
-      <input type="text" class="form-control input-pais" placeholder="Elija el pais..." aria-label="Elija el pais...">
-    </div>
-  </div>
+      <div class="col-lg-5 col-md-5 col-sm-12">
+        <div class="input-group">
+          <input type="text" class="form-control input-pais" placeholder="Elija el pais..." aria-label="Elija el pais...">
+        </div>
+      </div>
 
-  <div class="col-md-12 col-sm-12">
-    <div class="input-group">
-      <input type="text" class="form-control input-provincia" placeholder="Elija la provincia..."
-             aria-label="Search for...">
-      <span class="input-group-btn">
+      <div class="col-md-12 col-sm-12">
+        <div class="input-group">
+          <input type="text" class="form-control input-provincia" placeholder="Elija la provincia..."
+                 aria-label="Search for...">
+          <span class="input-group-btn">
         <button class="btn btn-secondary cpointer btn-vamos" type="button">¡Vamos!</button>
       </span>
+        </div>
+      </div>
+
     </div>
+    <!-- *************************** FIN DE LA PARTE DE BUSQUEDA *************************** -->
+
+    <!-- ******************** CARGAR ALGUNOS HOTELES POR DEFECTO O DESTACADOS  ********************-->
+    <app-carousel></app-carousel>
+    <!-- ******************************* FIN DE LA CARGA DE HOTELES ****************************** -->
+
   </div>
-
-</div>
-<!-- *************************** FIN DE LA PARTE DE BUSQUEDA *************************** -->
-
-<!-- ******************** CARGAR ALGUNOS HOTELES POR DEFECTO O DESTACADOS  ********************-->
-<app-carousel></app-carousel>
-<!-- ******************************* FIN DE LA CARGA DE HOTELES ****************************** -->
-
-<div style="background:red; ">
-  OTRO ELEMENTO MAS?
-  QUE VA A LLEVAR?
 </div>

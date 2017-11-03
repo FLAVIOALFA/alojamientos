@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as Pikaday from "pikaday";
 import * as moment from "moment";
 
-declare var $:any;
+declare let $:any;
 
 @Component({
   selector: 'app-home',
@@ -42,8 +42,6 @@ export class HomeComponent implements OnInit {
         fecha_setear = self.ponerDatos(calendario.toString(), contador);
         this.minDate = fecha_setear;
 
-      },
-      onClose: function(){
       }
     });
 
@@ -86,7 +84,7 @@ export class HomeComponent implements OnInit {
     console.log(cadena);
     for ( let fecha of fechas){
       if( ! parseInt(fecha) ){
-          fecha = fecha.replace(fecha[0],fecha[0].toUpperCase());
+        fecha = fecha.replace(fecha[0],fecha[0].toUpperCase());
 
       }
       result = result + " " + fecha;

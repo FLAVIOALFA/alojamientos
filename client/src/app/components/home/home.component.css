@@ -22,7 +22,7 @@
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
   .btn-vamos{
-    top: 0;
+    top: 5px;
   }
 }
 /************************ FIN PANTALLAS CELULARES - TABLETS ************************/
@@ -50,7 +50,7 @@
   }
   /***** Fin le damos un margen top al buscador de provincia *****/
   .btn-vamos{
-    top: 0;
+    top: 7px;
   }
 }
 /************************ FIN PANTALLAS NOTEBOOKTS ************************/
@@ -77,7 +77,7 @@
   }
   /***** FIN MARGEN TOP BUSCADOR PROVINCIA *****/
   .btn-vamos{
-    top: 0;
+    top: 10px;
   }
 
 }
@@ -127,12 +127,24 @@
   font-weight: 400;
 }
 .btn-vamos:active{
-  border-color: #ff7b3a;
+  background: #ce4400 !important;
+  border-color: #ff7b3a !important;
 }
 .btn-vamos:focus{
   box-shadow: none;
 }
 .btn-vamos:hover{
   background: #e24d04;
+}
+.fa-calendar{
+  margin-left: 5px;
+}
+
+#fondoPagina{
+  background-color: transparent;
+  background-image: url("../../../assets/imagenes/playaNaranja.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 /********************* FIN BOTON VAMOS *********************/
