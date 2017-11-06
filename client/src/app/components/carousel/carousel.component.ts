@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlojamientoService } from "../../services/alojamiento.service";
+
 
 @Component({
   selector: 'app-carousel',
@@ -23,7 +23,7 @@ export class CarouselComponent implements OnInit {
   private inter:any;
   private slideActive:boolean = true;
 
-  constructor( private _alojamientoService: AlojamientoService ) {
+  constructor(  ) {
     //this.screenHeight = window.screen.height;
     this.screenWidth = window.screen.width;
   }
