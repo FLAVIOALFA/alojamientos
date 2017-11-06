@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import * as Pikaday from "pikaday";
 import * as moment from "moment";
 
@@ -18,12 +18,14 @@ export class HomeComponent implements OnInit {
   private minDate:any;
   private maxDate:any;
 
-  constructor() {
+  constructor( private el : ElementRef ) {
     let currentYear:any = new Date().getFullYear();
     let maxYear:any = currentYear + 2;
     this.minDate = new Date();
     this.maxDate = new Date(maxYear, 11, 31);
   }
+
+  @ViewChild('pruebaFondo') pruebaFondo: ElementRef;
 
   ngOnInit() {
 
@@ -44,6 +46,12 @@ export class HomeComponent implements OnInit {
 
       }
     });
+
+    let altoCarousel:any = Math.abs( $("#fondoPagina").css("height").replace("px", "") );
+    $("#fondoPagina").css("height", (altoCarousel + 20));
+
+    console.log("Prueba del ElementRef: " + this.pruebaFondo.nativeElement.style);
+    console.log("Con Jquery: " + $("#fondoPagina").css("height"));
 
   }
 

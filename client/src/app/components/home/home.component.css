@@ -2,8 +2,10 @@
 
 /************************** PANTALLAS CELULARES - TABLETS**************************/
 @media screen and (min-width: 375px) and (max-width: 767px){
-  .contenedor-busqueda{
 
+  .contenedor-busqueda{
+    width: 100%;
+    position: relative;
   }
 
   /******** Alto de los inputs y boton vamos ********/
@@ -29,12 +31,14 @@
 
 /************************** PANTALLAS NOTEBOOKS **************************/
 @media screen and (min-width: 768px){
+  /*#fondoPagina{
+    height: 600px;
+  }*/
   .contenedor-busqueda{
     width: 80%;
     position: relative;
     left: 15%;
     float: left;
-    box-sizing: inherit;
   }
 
   /********* Alto de los inputs y boton vamos *********/
@@ -80,6 +84,11 @@
     top: 10px;
   }
 
+  #pais{
+    position: relative;
+    display: inline-block;
+  }
+
 }
 /************************ FIN PANTALLAS GRANDES ************************/
 /******************************************* FIN BUSCADOR *******************************************/
@@ -87,10 +96,6 @@
 .redondear-puntas{
   border-radius: 4px;
   padding: 10px;
-}
-
-.pais{
-  display: inline-block;
 }
 
 /********************* FOCUS CAMPO PAIS Y PROVINCIA *********************/
@@ -140,11 +145,19 @@
   margin-left: 5px;
 }
 
+.input-pais{
+  display: inline-block;
+}
+
 #fondoPagina{
-  background-color: transparent;
   background-image: url("../../../assets/imagenes/playaNaranja.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+}
+
+#contenedor-carousel{
+  background: rgba(255,255,255,0.5);
+  padding: 10px;
+  height: 440px;
 }
 /********************* FIN BOTON VAMOS *********************/
