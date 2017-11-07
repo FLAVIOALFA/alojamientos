@@ -5,10 +5,9 @@ import { NgModule } from '@angular/core';
 import { APP_ROUTING } from './app.routes';
 //******************* Fin Rutas *********************
 
-import { CalendarModule } from 'angular-calendar';
-
 // ********************* Servicios *********************
-import { AlojamientoService } from "./services/alojamiento.service";
+import{ AuthService } from "./services/auth.service";
+import{ AuthGuardService } from "./services/auth-guard.service";
 // ******************* Fin Servicios *******************
 // *********************** Componentes ***********************
 import { AppComponent } from './app.component';
@@ -29,9 +28,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
     BrowserModule,
     APP_ROUTING
   ],
-  providers: [
-    AlojamientoService
-  ],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

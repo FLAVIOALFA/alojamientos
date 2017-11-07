@@ -39,23 +39,22 @@ export class HomeComponent implements OnInit {
       maxDate: self.maxDate,
       yearRange: [2000,2020],
       onSelect: function(){
-
         contador++;
         fecha_setear = self.ponerDatos(calendario.toString(), contador);
         this.minDate = fecha_setear;
-
       }
     });
 
     let altoCarousel:any = Math.abs( $("#fondoPagina").css("height").replace("px", "") );
     $("#fondoPagina").css("height", (altoCarousel + 20));
 
-    console.log("Prueba del ElementRef: " + this.pruebaFondo.nativeElement.style);
-    console.log("Con Jquery: " + $("#fondoPagina").css("height"));
+    //console.log("Prueba del ElementRef: " + this.pruebaFondo.nativeElement.style);
+    //$("#fondoPagina").css("height"));
 
   }
 
   ponerDatos( fecha:string, posicion:number ) {
+
     let aux:string;
     let fecha_to_show= moment(fecha).locale("Es").format("dddd, D MMM");
 
@@ -64,20 +63,26 @@ export class HomeComponent implements OnInit {
     let mes:number = parseInt( fec[1] );
     let dia:number = parseInt( fec[2] );
 
-    aux = this.capitalizar(fecha_to_show);
-
     //Comprobamos que sea la fecha de ida
     if (!(posicion % 2 == 0)){
-      //Si tiene un valor grabado ya..
+      this.fecha_ida = null;
       this.fecha_ida = fecha;
-      this.titulo_fecha = aux + " - ";
+      aux = this.capitalizar(fecha_to_show);
+      this.titulo_fecha = aux;
       return new Date(anio, mes, dia);
 
-      //Comprobamos que sea la fecha de vuelta
     }else{
-      //Si tiene un valor grabado ya..
+      this.fecha_vuelta = null;
       this.fecha_vuelta = fecha;
-      this.titulo_fecha = this.titulo_fecha + aux;
+      aux = this.capitalizar(fecha_to_show);
+
+      if( moment(this.fecha_ida) < moment(this.fecha_vuelta) ){
+          this.titulo_fecha = this.titulo_fecha + " - " + aux ;
+
+      }else{
+        this.titulo_fecha = aux + " - " + this.titulo_fecha;
+      }
+
       return new Date();
 
     }
